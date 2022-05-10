@@ -1,0 +1,25 @@
+serviceAccount:
+  create: false
+  name: grafana-sa
+  nameTest:
+persistence:
+  type: pvc
+  enabled: true
+  # storageClassName: default
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+  # annotations: {}
+  finalizers:
+    - kubernetes.io/pvc-protection
+  # subPath: ""
+  # existingClaim:
+adminUser: admin
+adminPassword: <password-login-to-grafana-dashboard>
+# envFromSecret: grafana-secret-config
+env:
+  GF_DATABASE_TYPE: postgres
+  GF_DATABASE_HOST: <database-host>
+  GF_DATABASE_NAME: <database-name>
+  GF_DATABASE_USER: <database-user>
+  GF_DATABASE_PASSWORD: <database-password>
