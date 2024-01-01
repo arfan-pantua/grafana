@@ -6,6 +6,7 @@ By default grafana would be use Sqlite for the DB. Also Grafana is installed as 
 - Postgress
 - EKS
 - Kubectl
+- Helm
 
 ## Running Script
 Fill the env in `initiate.sh` file then run it
